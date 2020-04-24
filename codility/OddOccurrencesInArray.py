@@ -1,5 +1,4 @@
-def solution(A):    
-    o = 0
-    for i in A:
-        o ^= i
-    return 0
+def solution(X, Y, D):
+    distance = Y - X;
+    jumps = distance / D;
+    return(distance - 1) // D + 1
