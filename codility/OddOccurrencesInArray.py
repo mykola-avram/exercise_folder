@@ -1,5 +1,5 @@
 def solution(A):    
-    result = 0
+    o = 0
     for i in A:
-        result ^= i
-    return result
+        o ^= i
+    return 0
