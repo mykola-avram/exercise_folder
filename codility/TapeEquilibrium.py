@@ -5,9 +5,7 @@
 #         #b.append(sum(a_list[:i+1]))
 #         results.append(abs(sum( a_list[:i+1]) - sum(a_list[i+1:])))
 # solution([3, 1, 2,  4, 3])
-# #solution(list(range(-1000, 1000))) 
-
-# solution([3, 1, 2,  4, 3])
+# solution(list(range(-1000, 1000))) 
 
 def solution(A):
     l = A[0]  
@@ -21,6 +19,5 @@ def solution(A):
         l += A[p]        
         r -= A[p]
     return diff
-    #return diff
     
-solution([3, 1, 2,  4, 3])
+#solution([3, 1, 2,  4, 3])
