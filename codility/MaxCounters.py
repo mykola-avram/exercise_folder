@@ -1,27 +1,38 @@
 def solution(N, A):
     l = len(A)
     a = [0] * N
+    Max = 0
+    count = 0 
+    
     for i, el in enumerate(A):   #start = 1
-        
-        if (el > N): 
+        #print ('8: ',i, el)
+        if (el > N):  
             #Max = max(a)
-            #Max = a[el:el]
-            Max = a[0]
+            Max = count
+            #print('max.16..', Max)
+            a = [Max] * N          
             # for x in a:
             #      if x > Max:
             #          Max = x
             #print('sdfsdf',Max)
-            a = [Max] * N
+            #print('19 ',a)
+            
         else:
-            a[el-1] = a[el-1]+1
-            Max = a[el-1]
-            #print('sdfsdf',Max)
+             a[el-1] = a[el-1]+1
+             Max = a[el-1]
+             #count = Max
+             #print('sdfsdf',Max)
+             #print('25: ', Max, count)
+             if(Max > count):
+                    count = Max
+                    #print('max_count:', Max, count)
+  
     
     print(a) 
 
-solution(5, [3,4,4,6,1,4,4])
-#solution (1, [2, 1, 1, 2, 1])
-
+#solution(5, [3,4,4,6,1,4,4])
+solution (1, [2, 1, 1, 2, 1])
+#solution (6, [1,2,3,1,1,5,7,8])
     # (3, 2, 2, 4, 2)
     
     
