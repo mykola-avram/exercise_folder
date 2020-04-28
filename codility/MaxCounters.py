@@ -31,7 +31,7 @@ def solution(N, A):
     print(a) 
 
 #solution(5, [3,4,4,6,1,4,4])
-solution (1, [2, 1, 1, 2, 1])
+#solution (1, [2, 1, 1, 2, 1])
 #solution (6, [1,2,3,1,1,5,7,8])
     # (3, 2, 2, 4, 2)
     
