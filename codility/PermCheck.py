@@ -2,9 +2,17 @@ def solution(A):
     Max = max(A)
     Min = min(A)
     #A = list(set(A))
-    if Max - Min + 1 == len(A):
+    l = len(A)
+    if(l == 1 and A[0] == 1):
+        print(1)
         return 1
+        
     else:
-        return 0 
+        if Max - Min + 1 == len(A) and Max != Min :
+            print(1)
+            return 1
+        else:
+            print(0)
+            return 0 
     
-solution([4,1,3,2])
+solution([3,2])
