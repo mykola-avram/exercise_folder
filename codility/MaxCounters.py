@@ -5,52 +5,39 @@ def solution(N, A):
     count = 0 
     
     for i, el in enumerate(A):   #start = 1
-        #print ('8: ',i, el)
         if (el > N):  
-            #Max = max(a)
             Max = count
-            #print('max.16..', Max)
             a = [Max] * N          
-            # for x in a:
-            #      if x > Max:
-            #          Max = x
-            #print('sdfsdf',Max)
-            #print('19 ',a)
-            
+           
         else:
              a[el-1] = a[el-1]+1
              Max = a[el-1]
-             #count = Max
-             #print('sdfsdf',Max)
-             #print('25: ', Max, count)
              if(Max > count):
                     count = Max
-                    #print('max_count:', Max, count)
   
-    
     print(a) 
 
-#solution(5, [3,4,4,6,1,4,4])
-#solution (1, [2, 1, 1, 2, 1])
-#solution (6, [1,2,3,1,1,5,7,8])
-    # (3, 2, 2, 4, 2)
-    
-    
-
 # def solution(N, A):
-#     l = len(A)
-#     a = [0] * N
-#     #Max = max(a)
-#     for i, el in enumerate(A):   #start = 1
-#         if (el > N):
-#             Max = max(a)
-#             a = [Max] * N
+#     result = [0]*N    # The list to be returned
+#     max_counter = 0   # The used value in previous max_counter command
+#     current_max = 0   # The current maximum value of any counter
+#     for command in A:
+#         if 1 <= command <= N:
+#             # increase(X) command
+#             if max_counter > result[command-1]:
+#                 # lazy write
+#                 result[command-1] = max_counter
+#             result[command-1] += 1
+#             if current_max < result[command-1]:
+#                 current_max = result[command-1]
 #         else:
-#             a[el-1] = a[el-1]+1
-#             #Max = a[el-1]
-    
-#     #print(a) 
-#     return a
-
-# #solution(5, [3,4,4,6,1,4,4])
-# #solution(1, [2, 1, 1, 2, 1])
+#             # max_counter command
+#             # just record the current maximum value for later write
+#             max_counter = current_max
+#     for index in range(0,N):
+#         if result[index] < max_counter:
+#             # This element has never been used/updated after previous
+#             #     max_counter command
+#             result[index] = max_counter
+#     return result
+#https://codesays.com/2014/solution-to-max-counters-by-codility/
