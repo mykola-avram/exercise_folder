@@ -1,9 +1,8 @@
-def solution(A, B, K):
-    output = []
+def solution(A, B, M):
+    #counter = 0; 
     #print(A, B)
-    for el in range(A,B+1):   
-        if(el%K==0) :           
-            output.append(el)
-        #temp = temp // 10
-    print(len(output))
-solution(1, 1, 11)
+    if (A % M == 0): 
+        print(((B // M) - (A // M)) + 1)
+    print( ((B // M) - (A // M)))
+    #print ((B // M) - (A // M))
+#solution(0, 2000000000, 1)
