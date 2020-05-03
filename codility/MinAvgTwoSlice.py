@@ -1,45 +1,16 @@
-# def solution(A):
-#     l = len(A)
-#     size = 2
-#     array = []
-
-#     for i in range(1,l, size):
-#         print(A, i, i+2*size)
-#         if i+2*size > l:
-#             a = sum(A[i:])/len(A[i:])
-#             print(a, A[i:], len(A[i:]))
-#             array.append([a,i])            
-#             break
-#         else:
-#             a = sum(A[i:i+2])/len(A[i:i+2])
-#             array.append([a,i])
-#     print(min(array)[1:], array)
-#     for i in min(array)[1:]: 
-#         print(i)       
-    
-# #solution([10000, -10000])
-# solution([4,2,2,5,1,5,8,9])    
-
 def solution(A):
-    l = len(A)
-    size = 2
-    array = []
+    Min = 0
+    min_value = 10001
+ 
+    for i in range(0, len(A)-1):
+         
+        if (A[i] + A[i+1])/2.0 < min_value:
+            Min = i
+            min_value = (A[i] + A[i+1])/2.0
+        if i < len(A)-2 and (A[i] + A[i+1] + A[i+2])/3.0 < min_value:
+            Min = i
+            min_value = (A[i] + A[i+1] + A[i+2])/3.0
+ 
+    return Min
 
-    for i in range(1,l, size):
-        #print(A, i, i+2*size)
-        if i+2*size > l:
-            #print(A)
-            a = sum(A)/len(A)
-            #print(a, A[i:], len(A[i:]))
-            print(a)
-            array.append([a,i])            
-            break
-        else:
-            a = sum(A[i:i+2])/len(A[i:i+2])
-            array.append([a,i])
-    print(min(array)[1:], array)
-    for i in min(array)[1:]: 
-        print(i)       
-    
-solution([10000, -10000])
-#solution([4,2,2,5,1,5,8,9])    
+#solution([1,2,3,4])
