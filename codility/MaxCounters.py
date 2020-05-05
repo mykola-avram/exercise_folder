@@ -15,4 +15,4 @@ def solution(N, A):
              if(Max > count):
                     count = Max
   
-    print(a) 
+    return a 
