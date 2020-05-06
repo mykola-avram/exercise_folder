@@ -8,7 +8,7 @@ def solution (A):
             Max_2 = sum(l[1:]) 
             if Max < Max_2:
                 return 1
-                breakZ
+                break
         return 0
     else:
         return 0
