@@ -18,6 +18,6 @@ def solution(A):
     return count
 #solution([1, 2147483647, 0])
 #solution([1, 10, 100, 1])  
-solution([1,5,2,1,4,0])
+#solution([1,5,2,1,4,0])
 #solution( [1, 1, 1])
 
