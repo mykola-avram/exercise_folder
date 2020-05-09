@@ -16,6 +16,7 @@ def solution(A):
         if count > 10000000:
             return -1
     return count
+
 #solution([1, 2147483647, 0])
 #solution([1, 10, 100, 1])  
 #solution([1,5,2,1,4,0])
