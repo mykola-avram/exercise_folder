@@ -12,4 +12,3 @@ def solution(N):
             return stack[-2]
         else:
             return 4
-        
