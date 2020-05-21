@@ -7,12 +7,8 @@ def solution(N):
                     B = N // i
                     C = 2 * (i + B)
                     stack.append(C)
-                    #print(stack[-2], C, stack)
                     if C > stack[-2]:
                         break
-            print('C: ', stack[-2])
-            return C
+            return stack[-2]
         else:
             return 4
-
-#solution(30)
