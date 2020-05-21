@@ -1,5 +1,5 @@
 def solution(N):
-        A = B = 0
+        B = 0
         stack = [2 * (N + N), 2 * (N + N)]
         if N != 1:
             for i in range(1, N):
